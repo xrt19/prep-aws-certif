@@ -9,7 +9,9 @@
 Jika sesi terhenti di tengah jalan, gunakan prompt ini di sesi baru:
 
 ```
-Lanjutkan membuat soal latihan SAA-C03. Baca file soal-latihan/tracking.md
+Lanjutkan membuat soal latihan SAA-C03. 
+Baca soal-latihan secara keseluruhan (untuk tahu mana yang sudah dan belum), 
+kemudian baca juga soal-latihan/tracking.md
 untuk tahu set mana yang harus dibuat berikutnya dan topik apa yang sudah
 dipakai. Lanjutkan dari set yang statusnya "In Progress" dulu, atau set
 berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
