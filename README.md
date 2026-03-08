@@ -37,7 +37,7 @@ aws certif/
 
 ## Resources
 
-- [AWS SAA-C03 Exam Guide (official)](https://d1.awsstatic.com/training-certification/docs-sa-assoc/AWS-Certified-Solutions-Architect-Associate_Exam-Guide.pdf)
+- [AWS SAA-C03 Exam Guide (official)](https://d1.awsstatic.com/training-certification/docs-sa-assoc/AWS-Certified-Solutions-Architect-Associate_Exam-Guide.pdf) // sudah dicek manual bener. link mungkin broken, tapi search simple di google ketemu
 - [AWS Free Tier](https://aws.amazon.com/free/) — untuk hands-on practice
 - [Tutorials Dojo Practice Exams](https://tutorialsdojo.com/aws-certified-solutions-architect-associate/) — highly recommended
 - [Stephane Maarek – Udemy Course](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/) — paling populer
