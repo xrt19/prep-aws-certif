@@ -23,12 +23,12 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 
 | Domain | Target | Dibuat | Sisa |
 |--------|--------|--------|------|
-| Secure Architectures (30%) | 75 | 0 | 75 |
+| Secure Architectures (30%) | 75 | 20 | 55 |
 | Resilient Architectures (26%) | 65 | 0 | 65 |
 | High-Performing (24%) | 60 | 0 | 60 |
 | Cost-Optimized (20%) | 50 | 0 | 50 |
 | Mixed | 0 | 0 | 0 |
-| **Total** | **250** | **0** | **250** |
+| **Total** | **250** | **20** | **230** |
 
 ---
 
@@ -38,8 +38,8 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 
 | Set | Status | Topik Soal |
 |-----|--------|-----------|
-| 01 | Belum | |
-| 02 | Belum | |
+| 01 | Selesai | IAM Identity Center/SSO, credential compromise, IAM Role EC2, S3 Object Lock, AWS Config, WAF, SCP Organizations, Secrets Manager rotation, CloudTrail, VPC Gateway Endpoint |
+| 02 | Selesai | KMS CMK + EBS encryption, SCP tag enforcement, Cognito Identity Pool S3 access, Database Activity Streams, GuardDuty, IAM SourceIp condition, Interface VPC Endpoints, Security Hub, Lambda least privilege, IAM Access Analyzer |
 | 03 | Belum | |
 | 04 | Belum | |
 | 05 | Belum | |
@@ -91,7 +91,9 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 > Diupdate setiap set selesai dibuat. Digunakan untuk menghindari duplikasi soal antar set.
 
 ### Secure Architectures
-*(belum ada)*
+**Set 01:** IAM Identity Center/SSO, credential compromise response, IAM Role untuk EC2, S3 Object Lock Compliance mode, AWS Config change detection, AWS WAF SQLi/XSS, SCP Organizations, Secrets Manager auto-rotation, CloudTrail audit trail, VPC Gateway Endpoint S3
+
+**Set 02:** KMS CMK + EBS encryption + key rotation, SCP tag enforcement (`aws:RequestTag`), Cognito Identity Pool + identity-based S3 access, Database Activity Streams RDS, GuardDuty threat detection, IAM `aws:SourceIp` condition, Interface VPC Endpoints PrivateLink, Security Hub findings aggregation, Lambda execution role least privilege, IAM Access Analyzer unused access
 
 ### Resilient Architectures
 *(belum ada)*
