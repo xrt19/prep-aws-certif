@@ -25,10 +25,10 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 |--------|--------|--------|------|
 | Secure Architectures (30%) | 75 | 75 | 0 |
 | Resilient Architectures (26%) | 65 | 60 | 5 |
-| High-Performing (24%) | 60 | 30 | 30 |
+| High-Performing (24%) | 60 | 40 | 20 |
 | Cost-Optimized (20%) | 50 | 0 | 50 |
 | Mixed | 0 | 0 | 0 |
-| **Total** | **250** | **165** | **85** |
+| **Total** | **250** | **175** | **75** |
 
 ---
 
@@ -64,7 +64,7 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 | 14 | Selesai | CloudFront CDN global delivery, Global Accelerator AWS backbone TCP/UDP, EC2 GPU P/G family ML, Cluster Placement Group HPC, EBS io2 Block Express highest IOPS, CloudFront as S3 cache read throttling, RDS Read Replica offload reads, Enhanced Networking ENA SR-IOV, Lambda cold start Provisioned Concurrency, S3 Multipart Upload parallel resume |
 | 15 | Selesai | Redis vs Memcached feature comparison, DynamoDB hot partition key design, EC2 Instance Store ephemeral, Kinesis shard splitting throughput, Aurora Parallel Query storage-layer, Lambda@Edge vs CloudFront Functions, S3 Byte-Range Fetches partial retrieval, VPC Gateway Endpoint routing NAT bypass, ASG instance warm-up target tracking, Database indexing full scan vs index |
 | 16 | Selesai | EC2 Spot Instances, DynamoDB GSI, S3 Select, Redshift distribution/sort key, Amazon OpenSearch, API Gateway caching, Lambda power tuning memory-CPU, ECS Fargate CPU units, Predictive Scaling, EFA OS-bypass RDMA MPI |
-| 17 | Belum | |
+| 17 | Selesai | Athena Parquet/ORC partitioning, AWS Glue DPU, DynamoDB TTL, ElastiCache Redis Cluster Mode sharding, S3 Multipart Upload pre-signed URL, SageMaker Managed Spot Training, SageMaker Real-Time Inference, Kubernetes OOMKilled resource limits, Athena MSCK REPAIR TABLE Glue catalog, Kinesis Data Analytics Flink tumbling window |
 | 18 | Belum | |
 | 19 | Belum | |
 
@@ -123,7 +123,7 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 
 **Set 15:** Redis vs Memcached feature comparison data structures persistence pub/sub, DynamoDB hot partition key design cardinality write sharding, EC2 Instance Store ephemeral high-performance scratch space, Kinesis shard splitting throughput scaling Enhanced Fan-Out read vs write, Aurora Parallel Query storage-layer processing OLAP, Lambda@Edge vs CloudFront Functions edge personalization, S3 Byte-Range Fetches partial object retrieval HTTP Range, VPC Gateway Endpoint route table DynamoDB S3 NAT bypass, ASG instance warm-up period target tracking metric accuracy, Database indexing full table scan vs index scan query optimization
 
-**Set 16:** EC2 Spot Instances fault-tolerant batch workloads interruption checkpoint, DynamoDB GSI Global Secondary Index query pattern access pattern design projection, S3 Select SQL query CSV JSON Parquet push-down filter data transfer reduction, Redshift distribution key DISTKEY DISTYLE sort key zone maps MPP architecture query optimization, Amazon OpenSearch full-text search faceted search inverted index real-time suggestions, API Gateway caching response cache TTL cache key Lambda invocation reduction, Lambda power tuning memory-CPU proportional relationship execution time cost optimization, ECS Fargate task definition CPU units CPU throttling CFS container performance, Predictive Scaling forecast ML cyclical traffic patterns proactive pre-scaling, EFA Elastic Fabric Adapter OS-bypass RDMA MPI HPC inter-node communication
+**Set 17:** Athena query optimization columnar format Parquet ORC partitioning partition pruning data scan cost, AWS Glue DPU Data Processing Units Apache Spark parallelism Auto Scaling, DynamoDB TTL Time to Live automatic expiry no WCU consumption, ElastiCache Redis Cluster Mode Enabled sharding hash slots horizontal scaling, S3 Multipart Upload pre-signed URL direct-to-S3 upload resume on failure, SageMaker Managed Spot Training checkpoint interruption recovery cost optimization, SageMaker Real-Time Inference vs Serverless Inference vs Batch Transform latency requirements, Kubernetes OOMKilled resource requests limits memory management pod spec, Athena partition management MSCK REPAIR TABLE ALTER TABLE ADD PARTITION Glue Data Catalog, Kinesis Data Analytics Apache Flink managed streaming tumbling window aggregation IoT analytics
 
 ### Cost-Optimized Architectures
 *(belum ada)*
