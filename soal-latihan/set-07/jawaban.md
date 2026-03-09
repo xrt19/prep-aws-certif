@@ -197,6 +197,107 @@ Mapping requirement ke service:
 
 ---
 
+## Soal 11 — Jawaban: B
+
+**CloudTrail organization trail + S3 Object Lock di Log Archive account terpisah**
+
+**Kenapa B:**
+Ini adalah best practice AWS untuk audit trail yang tamper-proof:
+1. **Organization trail** — satu trail yang cover semua member accounts, termasuk API calls dari AWS services (management events)
+2. **Log Archive account terpisah** — log dikirim ke S3 bucket di account yang berbeda sehingga admin di akun production tidak bisa hapus log
+3. **S3 Object Lock Compliance mode** — log tidak bisa dihapus selama retention period, bahkan oleh root account Log Archive
+
+Kombinasi ini adalah pattern standar di AWS multi-account landing zone (Control Tower mengimplementasikan ini otomatis).
+
+**Kenapa bukan yang lain:**
+- **A** — Simpan log di akun yang sama berarti admin dengan akses S3 di akun tersebut bisa hapus log. Tidak memenuhi requirement "tidak bisa dihapus siapapun di akun tersebut".
+- **C** — Enkripsi KMS melindungi confidentiality log, tapi tidak mencegah deletion.
+- **D** — Log file validation membuktikan bahwa log tidak dimodifikasi setelah ditulis, tapi tidak mencegah deletion file itu sendiri.
+
+**Konsep yang diuji:** CloudTrail organization trail, Log Archive account, S3 Object Lock untuk log immutability, multi-account security pattern.
+
+---
+
+## Soal 12 — Jawaban: B
+
+**AWS CloudTrail — semua KMS API calls otomatis di-log**
+
+**Kenapa B:**
+CloudTrail secara otomatis merekam **semua AWS API calls termasuk KMS** — `Encrypt`, `Decrypt`, `GenerateDataKey`, `DescribeKey`, dll. Setiap log entry mencakup: siapa yang memanggil (IAM user/role), dari IP mana, kapan, dan parameter apa yang digunakan. Ini adalah audit trail yang lengkap untuk KMS usage tanpa konfigurasi tambahan apapun.
+
+**Kenapa bukan yang lain:**
+- **A** — Key rotation adalah proses rotasi key material secara periodik, tidak ada hubungannya dengan logging usage.
+- **C** — Tidak ada fitur "KMS key policy logging" di CloudWatch secara terpisah. CloudTrail sudah cover ini.
+- **D** — Config mencatat perubahan **konfigurasi** KMS key (misalnya key policy berubah, key di-disable), bukan setiap kali key digunakan untuk encrypt/decrypt.
+
+**Konsep yang diuji:** CloudTrail KMS API logging, audit trail for encryption operations, automatic logging.
+
+---
+
+## Soal 13 — Jawaban: B
+
+**Custom policy: `s3:GetObject` untuk ARN bucket spesifik + `dynamodb:PutItem` untuk ARN tabel spesifik**
+
+**Kenapa B:**
+Ini adalah implementasi **principle of least privilege** yang benar — Lambda hanya mendapat:
+- Action yang benar-benar diperlukan (`s3:GetObject`, bukan `s3:*`)
+- Pada resource yang spesifik (ARN bucket dan tabel tertentu, bukan `*`)
+
+Contoh policy:
+```json
+{
+  "Effect": "Allow",
+  "Action": ["s3:GetObject"],
+  "Resource": "arn:aws:s3:::my-bucket/*"
+},
+{
+  "Effect": "Allow",
+  "Action": ["dynamodb:PutItem"],
+  "Resource": "arn:aws:dynamodb:region:account:table/my-table"
+}
+```
+
+**Kenapa bukan yang lain:**
+- **A** — `AmazonS3FullAccess` dan `AmazonDynamoDBFullAccess` memberikan akses ke **semua** S3 buckets dan semua DynamoDB tables di akun. Melanggar least privilege secara signifikan.
+- **C** — `AdministratorAccess` adalah worst practice — Lambda bisa akses dan modify apapun di akun. Security nightmare.
+- **D** — Menyimpan credentials di environment variable adalah anti-pattern untuk akses antar AWS services. Lambda harus gunakan IAM Role, bukan credentials.
+
+**Konsep yang diuji:** Lambda execution role, least privilege per-ARN, action scoping, resource scoping.
+
+---
+
+## Soal 14 — Jawaban: B
+
+**AWS Config rule `ec2-security-group-attached-to-eni`**
+
+**Kenapa B:**
+AWS Config menyediakan managed rule `ec2-security-group-attached-to-eni` yang secara otomatis **detect Security Groups yang tidak ter-attach ke ENI (Elastic Network Interface) manapun** — artinya tidak digunakan oleh EC2, RDS, Lambda, atau resource lain. Ketika ditemukan, Config akan mark sebagai non-compliant dan bisa di-configure untuk notify via SNS atau trigger auto-remediation.
+
+**Kenapa bukan yang lain:**
+- **A** — Script manual tidak scalable, tidak real-time, dan tetap butuh effort manusia setiap minggu.
+- **C** — Trusted Advisor memang ada check untuk unused Security Groups, tapi tersedia di Business/Enterprise Support plan saja dan tidak continuous monitoring seperti Config.
+- **D** — GuardDuty untuk threat detection (malicious activity), tidak dirancang untuk detect resource hygiene issues seperti unused Security Groups.
+
+**Konsep yang diuji:** AWS Config managed rules, resource hygiene, Security Group lifecycle management.
+
+---
+
+## Soal 15 — Jawaban: B
+
+**AWS Config rule `access-keys-rotated` dengan `maxAccessKeyAge: 90`**
+
+**Kenapa B:**
+Config managed rule `access-keys-rotated` secara otomatis **memeriksa semua IAM access keys di akun** dan flag keys yang usianya melebihi parameter `maxAccessKeyAge` yang di-set (dalam hari). Rule ini berjalan secara continuous — setiap kali ada perubahan IAM atau secara periodic. Hasilnya bisa dilihat di Config dashboard, dan bisa di-integrate dengan SNS untuk notifikasi ke tim security.
+
+**Kenapa bukan yang lain:**
+- **A** — Email reminder bergantung pada kepatuhan manual — tidak enforce, tidak scalable, dan mudah terlewat.
+- **C** — IAM Access Analyzer untuk menganalisis **resource policies dan unused permissions/access**, bukan untuk monitor usia access keys secara spesifik.
+- **D** — MFA dan access key rotation adalah dua kontrol security yang berbeda dan tidak saling menggantikan. MFA untuk console login authentication, access key rotation untuk API credentials hygiene.
+
+**Konsep yang diuji:** AWS Config rule access-keys-rotated, IAM access key hygiene, continuous compliance monitoring.
+
+---
+
 ## Rekap Skor
 
 | Soal | Topik |
@@ -211,3 +312,8 @@ Mapping requirement ke service:
 | 8 | Service-Linked Role, AWS service permissions |
 | 9 | VPC Peering non-transitive vs Transit Gateway |
 | 10 | Multi-service security architecture mapping |
+| 11 | CloudTrail organization trail + S3 Object Lock Log Archive |
+| 12 | CloudTrail audit trail untuk KMS API calls |
+| 13 | Lambda execution role least privilege per-ARN |
+| 14 | AWS Config rule ec2-security-group-attached-to-eni |
+| 15 | AWS Config rule access-keys-rotated 90 hari |

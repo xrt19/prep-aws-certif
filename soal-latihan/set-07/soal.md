@@ -139,4 +139,69 @@ Kombinasi services mana yang memenuhi **semua empat** requirements tersebut?
 
 ---
 
+**Soal 11**
+
+Sebuah perusahaan ingin memastikan bahwa **semua API calls ke AWS** dari akun mereka di-log, termasuk calls yang dilakukan oleh AWS services atas nama mereka (misalnya Auto Scaling yang launch EC2). Mereka juga ingin log ini **tidak bisa dihapus** oleh siapapun di akun tersebut.
+
+Kombinasi konfigurasi CloudTrail mana yang paling tepat?
+
+- A. Enable CloudTrail dan simpan log ke S3 bucket di akun yang sama
+- B. Enable CloudTrail organization trail, kirim log ke S3 bucket di **akun terpisah (Log Archive account)**, aktifkan **S3 Object Lock Compliance mode** pada bucket tersebut
+- C. Enable CloudTrail dan enkripsi log dengan KMS
+- D. Enable CloudTrail dan aktifkan log file validation saja
+
+---
+
+**Soal 12**
+
+Sebuah perusahaan menjalankan aplikasi yang memproses data keuangan. Mereka menggunakan **AWS KMS untuk enkripsi**, dan security auditor meminta bukti bahwa **semua penggunaan KMS key** (encrypt, decrypt, siapa yang pakai, kapan) bisa di-audit.
+
+Cara paling tepat untuk memenuhi ini adalah?
+
+- A. Aktifkan KMS key rotation — ini secara otomatis log semua key usage
+- B. Gunakan AWS CloudTrail — semua KMS API calls (Encrypt, Decrypt, GenerateDataKey, dll) otomatis di-log di CloudTrail
+- C. Aktifkan KMS key policy logging di CloudWatch
+- D. Gunakan AWS Config untuk track KMS key usage
+
+---
+
+**Soal 13**
+
+Sebuah aplikasi Lambda di-trigger oleh **S3 event** setiap kali ada file baru di-upload. Lambda memproses file tersebut dan menyimpan hasilnya ke DynamoDB. Security team ingin memastikan bahwa Lambda **hanya bisa akses bucket sumber dan tabel DynamoDB tertentu** — tidak boleh akses resource lain.
+
+IAM configuration yang paling tepat untuk Lambda execution role adalah?
+
+- A. Attach `AmazonS3FullAccess` dan `AmazonDynamoDBFullAccess` managed policies
+- B. Buat custom policy dengan `s3:GetObject` untuk ARN bucket spesifik, dan `dynamodb:PutItem` untuk ARN tabel spesifik saja
+- C. Attach `AdministratorAccess` agar Lambda bisa akses apapun yang diperlukan
+- D. Gunakan Lambda environment variables untuk store credentials S3 dan DynamoDB
+
+---
+
+**Soal 14**
+
+Sebuah perusahaan punya tim developer yang **sering lupa delete Security Groups** yang sudah tidak dipakai. Security Groups yang orphaned ini menumpuk dan menyulitkan audit. Mereka ingin sistem yang **otomatis detect** Security Groups tanpa attachment manapun.
+
+Solusi paling tepat dengan operational overhead rendah adalah?
+
+- A. Buat script manual yang dijalankan tim security setiap minggu
+- B. Gunakan AWS Config managed rule **`ec2-security-group-attached-to-eni`** yang detect Security Groups yang tidak ter-attach ke ENI apapun
+- C. Gunakan AWS Trusted Advisor untuk check unused Security Groups
+- D. Gunakan GuardDuty untuk detect orphaned Security Groups
+
+---
+
+**Soal 15**
+
+Sebuah perusahaan sedang diaudit dan auditor menemukan bahwa beberapa **IAM users masih menggunakan access keys yang sudah lebih dari 90 hari tidak di-rotate**. Security policy perusahaan mewajibkan rotasi setiap 90 hari.
+
+Solusi mana yang paling tepat untuk **enforce dan monitor** kebijakan ini secara berkelanjutan?
+
+- A. Kirim email reminder ke semua developer setiap 3 bulan
+- B. Gunakan AWS Config rule **`access-keys-rotated`** dengan parameter `maxAccessKeyAge: 90` — flag semua access keys yang melebihi batas usia
+- C. Gunakan IAM Access Analyzer untuk detect access keys yang lama
+- D. Aktifkan MFA untuk semua IAM users sebagai pengganti access key rotation
+
+---
+
 > Sudah jawab semua? Buka `jawaban.md` untuk cek.
