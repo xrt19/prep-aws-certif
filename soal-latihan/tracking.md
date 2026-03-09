@@ -24,11 +24,11 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 | Domain | Target | Dibuat | Sisa |
 |--------|--------|--------|------|
 | Secure Architectures (30%) | 75 | 75 | 0 |
-| Resilient Architectures (26%) | 65 | 20 | 45 |
+| Resilient Architectures (26%) | 65 | 30 | 35 |
 | High-Performing (24%) | 60 | 0 | 60 |
 | Cost-Optimized (20%) | 50 | 0 | 50 |
 | Mixed | 0 | 0 | 0 |
-| **Total** | **250** | **95** | **155** |
+| **Total** | **250** | **105** | **145** |
 
 ---
 
@@ -52,7 +52,7 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 |-----|--------|-----------|
 | 08 | Selesai | RDS Multi-AZ failover, Scheduled scaling, SQS Visibility Timeout, Route 53 latency-based routing, ASG self-healing health checks, RDS PITR, S3 CRR, ALB vs NLB vs CLB, DR strategies RTO/RPO, SQS decoupling burst absorption |
 | 09 | Selesai | RDS Proxy connection pooling, Aurora auto-scaling storage + failover, SNS fan-out pattern, SQS FIFO ordering + exactly-once, ASG Lifecycle Hooks, Aurora Global Database cross-region, Route 53 Failover routing + health check, Kinesis Data Streams replay, Step Functions orchestration, ElastiCache caching layer |
-| 10 | Belum | |
+| 10 | Selesai | ECS Service self-healing Fargate, DynamoDB Global Tables multi-active, ALB weighted target groups blue/green, NLB Elastic IP static, DynamoDB Streams event-driven, Aurora Serverless v2, EventBridge content-based routing, API Gateway caching, S3 SRR vs CRR, Step scaling asymmetric scale |
 | 11 | Belum | |
 | 12 | Belum | |
 | 13 | Belum | |
@@ -109,6 +109,8 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 **Set 08:** RDS Multi-AZ automatic failover, scheduled scaling proactive, SQS Visibility Timeout long-running processing, Route 53 latency-based routing + health checks, ASG self-healing terminate & replace, RDS Point-in-Time Recovery, S3 Cross-Region Replication, ALB vs NLB vs CLB Layer 7 path routing, DR strategies RTO/RPO Multi-Site Active-Active, SQS decoupling burst absorption 14-day retention
 
 **Set 09:** RDS Proxy connection pooling Lambda, Aurora auto-scaling storage + failover < 30 detik, SNS fan-out one-to-many pattern, SQS FIFO ordering + exactly-once MessageGroupId, ASG Lifecycle Hooks pre-terminate custom action, Aurora Global Database cross-region < 1 detik lag, Route 53 Failover routing + health check requirement, Kinesis Data Streams replay multiple consumers, Step Functions workflow orchestration state machine, ElastiCache caching layer sub-millisecond (Multi-AZ tidak serve reads)
+
+**Set 10:** ECS Service desired count self-healing Fargate, DynamoDB Global Tables multi-region multi-active, ALB weighted target groups blue/green canary, NLB Elastic IP static TCP Layer 4, DynamoDB Streams event-driven Lambda trigger, Aurora Serverless v2 near-zero idle, EventBridge content-based routing event bus, API Gateway caching TTL reduce Lambda invocations, S3 SRR vs CRR same-region replication, Step scaling multi-step asymmetric scale out vs scale in
 
 ### High-Performing Architectures
 *(belum ada)*
