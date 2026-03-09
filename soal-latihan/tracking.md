@@ -25,10 +25,10 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 |--------|--------|--------|------|
 | Secure Architectures (30%) | 75 | 75 | 0 |
 | Resilient Architectures (26%) | 65 | 60 | 5 |
-| High-Performing (24%) | 60 | 50 | 10 |
+| High-Performing (24%) | 60 | 60 | 0 |
 | Cost-Optimized (20%) | 50 | 0 | 50 |
 | Mixed | 0 | 0 | 0 |
-| **Total** | **250** | **185** | **65** |
+| **Total** | **250** | **195** | **55** |
 
 ---
 
@@ -66,7 +66,7 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 | 16 | Selesai | EC2 Spot Instances, DynamoDB GSI, S3 Select, Redshift distribution/sort key, Amazon OpenSearch, API Gateway caching, Lambda power tuning memory-CPU, ECS Fargate CPU units, Predictive Scaling, EFA OS-bypass RDMA MPI |
 | 17 | Selesai | Athena Parquet/ORC partitioning, AWS Glue DPU, DynamoDB TTL, ElastiCache Redis Cluster Mode sharding, S3 Multipart Upload pre-signed URL, SageMaker Managed Spot Training, SageMaker Real-Time Inference, Kubernetes OOMKilled resource limits, Athena MSCK REPAIR TABLE Glue catalog, Kinesis Data Analytics Flink tumbling window |
 | 18 | Selesai | RDS Read Replica dedicated analytics, CloudFront Functions simple redirect, AWS DMS CDC heterogeneous migration, Lambda Layers shared dependencies, Amazon MSK managed Kafka, RDS Proxy connection pooling Lambda, S3 Event Notification SQS Lambda pipeline, CloudFront in front of ALB static caching, FSx for Lustre HPC parallel file system, RDS Performance Insights Top SQL |
-| 19 | Belum | |
+| 19 | Selesai | DynamoDB GSI composite sort key, Aurora Machine Learning SageMaker SQL, DynamoDB Streams Lambda OpenSearch CDC, SageMaker Blue/Green deployment, AWS Cloud Map ECS Service Discovery, CloudWatch PutMetricData custom metrics, Amazon Athena serverless ad-hoc SQL, Secrets Manager ECS integration rotation, Lambda VPC NAT Gateway internet+private, Global Accelerator anycast failover vs Route 53 |
 
 ### Cost-Optimized Architectures (Set 20–24)
 
@@ -128,6 +128,8 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 **Set 17:** Athena query optimization columnar format Parquet ORC partitioning partition pruning data scan cost, AWS Glue DPU Data Processing Units Apache Spark parallelism Auto Scaling, DynamoDB TTL Time to Live automatic expiry no WCU consumption, ElastiCache Redis Cluster Mode Enabled sharding hash slots horizontal scaling, S3 Multipart Upload pre-signed URL direct-to-S3 upload resume on failure, SageMaker Managed Spot Training checkpoint interruption recovery cost optimization, SageMaker Real-Time Inference vs Serverless Inference vs Batch Transform latency requirements, Kubernetes OOMKilled resource requests limits memory management pod spec, Athena partition management MSCK REPAIR TABLE ALTER TABLE ADD PARTITION Glue Data Catalog, Kinesis Data Analytics Apache Flink managed streaming tumbling window aggregation IoT analytics
 
 **Set 18:** RDS Read Replica dedicated per workload analytics isolation instance type flexibility, CloudFront Functions vs Lambda@Edge simple redirect URL rewriting cost comparison, AWS DMS Database Migration Service CDC Change Data Capture heterogeneous migration Oracle Aurora minimal downtime, Lambda Layers shared dependencies binary large packages size limits 250MB, Amazon MSK Managed Streaming Kafka API compatibility self-managed migration, RDS Proxy connection pooling Lambda too many connections VPC, S3 Event Notification SQS Lambda event-driven pipeline buffer retry decoupling, CloudFront in front of ALB static dynamic content caching cache behaviors, FSx for Lustre HPC high-performance parallel file system POSIX S3 integration sub-ms, RDS Performance Insights DB load Top SQL wait events query monitoring
+
+**Set 19:** DynamoDB GSI composite key sort key for ordering query optimization, Aurora Machine Learning SageMaker Comprehend SQL function ML inference in-database, DynamoDB Streams Lambda OpenSearch CDC change data capture audit trail real-time sync, SageMaker endpoint blue/green deployment canary traffic shifting zero-downtime model update, AWS Cloud Map ECS Service Discovery DNS-based dynamic registration deregistration, CloudWatch PutMetricData API custom business metrics namespaces dimensions, Amazon Athena serverless ad-hoc interactive SQL S3 data lake pay-per-scan, Secrets Manager ECS native integration secrets injection automatic rotation database credentials, Lambda VPC configuration NAT Gateway private subnet internet access RDS pattern, Global Accelerator anycast static IP instant failover AWS backbone vs Route 53 DNS propagation delay
 
 ### Cost-Optimized Architectures
 *(belum ada)*
