@@ -24,11 +24,11 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 | Domain | Target | Dibuat | Sisa |
 |--------|--------|--------|------|
 | Secure Architectures (30%) | 75 | 75 | 0 |
-| Resilient Architectures (26%) | 65 | 0 | 65 |
+| Resilient Architectures (26%) | 65 | 10 | 55 |
 | High-Performing (24%) | 60 | 0 | 60 |
 | Cost-Optimized (20%) | 50 | 0 | 50 |
 | Mixed | 0 | 0 | 0 |
-| **Total** | **250** | **75** | **175** |
+| **Total** | **250** | **85** | **165** |
 
 ---
 
@@ -50,7 +50,7 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 
 | Set | Status | Topik Soal |
 |-----|--------|-----------|
-| 08 | Belum | |
+| 08 | Selesai | RDS Multi-AZ failover, Scheduled scaling, SQS Visibility Timeout, Route 53 latency-based routing, ASG self-healing health checks, RDS PITR, S3 CRR, ALB vs NLB vs CLB, DR strategies RTO/RPO, SQS decoupling burst absorption |
 | 09 | Belum | |
 | 10 | Belum | |
 | 11 | Belum | |
@@ -106,7 +106,7 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 **Set 07:** AWS Private CA internal TLS mTLS, AWS Verified Access zero-trust tanpa VPN, CORS cross-origin API Gateway/S3, AD Connector vs AWS Managed Microsoft AD, IAM role chaining 1 jam session limit, CloudFront Signed URLs vs Signed Cookies, Gateway Endpoints + Interface Endpoints kombinasi, Service-Linked Role AWS service permissions, VPC Peering non-transitive vs Transit Gateway, multi-service security architecture mapping, CloudTrail organization trail + S3 Object Lock Log Archive, KMS API calls audit via CloudTrail, Lambda execution role least privilege per-ARN, Config rule ec2-security-group-attached-to-eni, Config rule access-keys-rotated 90 hari
 
 ### Resilient Architectures
-*(belum ada)*
+**Set 08:** RDS Multi-AZ automatic failover, scheduled scaling proactive, SQS Visibility Timeout long-running processing, Route 53 latency-based routing + health checks, ASG self-healing terminate & replace, RDS Point-in-Time Recovery, S3 Cross-Region Replication, ALB vs NLB vs CLB Layer 7 path routing, DR strategies RTO/RPO Multi-Site Active-Active, SQS decoupling burst absorption 14-day retention
 
 ### High-Performing Architectures
 *(belum ada)*
