@@ -24,11 +24,11 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 | Domain | Target | Dibuat | Sisa |
 |--------|--------|--------|------|
 | Secure Architectures (30%) | 75 | 75 | 0 |
-| Resilient Architectures (26%) | 65 | 40 | 25 |
+| Resilient Architectures (26%) | 65 | 50 | 15 |
 | High-Performing (24%) | 60 | 0 | 60 |
 | Cost-Optimized (20%) | 50 | 0 | 50 |
 | Mixed | 0 | 0 | 0 |
-| **Total** | **250** | **115** | **135** |
+| **Total** | **250** | **125** | **125** |
 
 ---
 
@@ -54,7 +54,7 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 | 09 | Selesai | RDS Proxy connection pooling, Aurora auto-scaling storage + failover, SNS fan-out pattern, SQS FIFO ordering + exactly-once, ASG Lifecycle Hooks, Aurora Global Database cross-region, Route 53 Failover routing + health check, Kinesis Data Streams replay, Step Functions orchestration, ElastiCache caching layer |
 | 10 | Selesai | ECS Service self-healing Fargate, DynamoDB Global Tables multi-active, ALB weighted target groups blue/green, NLB Elastic IP static, DynamoDB Streams event-driven, Aurora Serverless v2, EventBridge content-based routing, API Gateway caching, S3 SRR vs CRR, Step scaling asymmetric scale |
 | 11 | Selesai | SQS Long Polling reduce empty responses, Kinesis Firehose managed delivery S3, ASG cooldown period warm-up, DynamoDB DAX microsecond latency, Elastic Beanstalk Rolling deployment, EFS regional multi-AZ by default, CloudFront Origin Groups failover, Route 53 Geolocation routing, RDS Storage Auto Scaling, ECS Capacity Providers Cluster scaling |
-| 12 | Belum | |
+| 12 | Selesai | ElastiCache Redis Multi-AZ failover, Lambda Reserved vs Provisioned Concurrency, FSx for Lustre HPC, AWS Elastic Disaster Recovery, AWS Backup centralized, DynamoDB On-Demand spiky workloads, FSx for Windows SMB AD, AWS Fault Injection Service chaos engineering, Route 53 weighted + health checks canary, Transit Gateway Peering inter-region |
 | 13 | Belum | |
 
 ### High-Performing Architectures (Set 14–19)
@@ -113,6 +113,8 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 **Set 10:** ECS Service desired count self-healing Fargate, DynamoDB Global Tables multi-region multi-active, ALB weighted target groups blue/green canary, NLB Elastic IP static TCP Layer 4, DynamoDB Streams event-driven Lambda trigger, Aurora Serverless v2 near-zero idle, EventBridge content-based routing event bus, API Gateway caching TTL reduce Lambda invocations, S3 SRR vs CRR same-region replication, Step scaling multi-step asymmetric scale out vs scale in
 
 **Set 11:** SQS Long Polling WaitTimeSeconds reduce empty responses, Kinesis Data Firehose managed delivery transform S3, ASG cooldown period instance warm-up, DynamoDB DAX microsecond latency hot items, Elastic Beanstalk Rolling deployment no downtime, EFS regional redundancy multi-AZ by default, CloudFront Origin Groups origin failover, Route 53 Geolocation routing country-level default record, RDS Storage Auto Scaling no downtime, ECS Capacity Providers Cluster Auto Scaling EC2 infrastructure
+
+**Set 12:** ElastiCache Redis Multi-AZ automatic failover, Lambda Reserved Concurrency vs Provisioned Concurrency, FSx for Lustre HPC parallel file system, AWS Elastic Disaster Recovery continuous replication on-premise, AWS Backup centralized multi-service, DynamoDB On-Demand vs Provisioned spiky workloads, FSx for Windows File Server SMB NTFS AD integration, AWS Fault Injection Service chaos engineering, Route 53 weighted routing + health checks canary failover, Transit Gateway Peering inter-region hub-and-spoke
 
 ### High-Performing Architectures
 *(belum ada)*
