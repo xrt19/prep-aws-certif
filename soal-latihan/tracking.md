@@ -23,12 +23,12 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 
 | Domain | Target | Dibuat | Sisa |
 |--------|--------|--------|------|
-| Secure Architectures (30%) | 75 | 50 | 25 |
+| Secure Architectures (30%) | 75 | 60 | 15 |
 | Resilient Architectures (26%) | 65 | 0 | 65 |
 | High-Performing (24%) | 60 | 0 | 60 |
 | Cost-Optimized (20%) | 50 | 0 | 50 |
 | Mixed | 0 | 0 | 0 |
-| **Total** | **250** | **50** | **200** |
+| **Total** | **250** | **60** | **190** |
 
 ---
 
@@ -43,7 +43,7 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 | 03 | Selesai | Amazon Macie PII discovery, NACL vs SG explicit deny, ACM auto-renewal, Cross-account IAM Role, Permission Boundaries, S3 Block Public Access, Network Firewall DPI, IAM policy evaluation order, Lambda resource-based policy, ALB HTTP→HTTPS redirect |
 | 04 | Selesai | AWS Shield Standard/Advanced, SSM Session Manager logging, AWS RAM resource sharing, S3 pre-signed URL, Amazon Inspector CVE scan, AWS Firewall Manager, KMS key policy precedence, Cognito User Pool + Identity Pool, Config auto-remediation SSM, RDS encryption at rest immutable |
 | 05 | Selesai | VPC Flow Logs, S3 Access Points, IRSA EKS, Envelope encryption + KMS DEK, GuardDuty delegated admin, SSM Parameter Store SecureString/tiers, CloudTrail multi-region trail, AWS Artifact compliance reports, S3 Block Public Access level bucket, EFS default encryption + Config rule |
-| 06 | Belum | |
+| 06 | Selesai | AWS Control Tower landing zone, S3 Glacier Vault Lock, Amazon Detective incident investigation, Customer Managed vs Inline Policy, STS session policy, SG referencing cross-VPC, WAF rate-based rules, S3 Object Ownership bucket owner enforced, Trusted Advisor security checks, Multi-tier SG chaining |
 | 07 | Belum | |
 
 ### Resilient Architectures (Set 08–13)
@@ -100,6 +100,8 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 **Set 04:** AWS Shield Standard vs Advanced, SSM Session Manager session logging, AWS RAM resource sharing, S3 pre-signed URL time-limited access, Amazon Inspector vulnerability assessment, AWS Firewall Manager centralized WAF, KMS key policy vs IAM policy precedence, Cognito User Pool + Identity Pool combined, AWS Config auto-remediation + SSM Automation, RDS encryption immutable at launch
 
 **Set 05:** VPC Flow Logs network traffic metadata, S3 Access Points multi-tenant, IRSA IAM Roles for Service Accounts EKS, envelope encryption + KMS DEK 4KB limit, GuardDuty delegated administrator multi-account, SSM Parameter Store SecureString + Standard/Advanced tier, CloudTrail multi-region trail, AWS Artifact compliance reports ISO/SOC, S3 Block Public Access level bucket, EFS default encryption + Config rule defense-in-depth
+
+**Set 06:** AWS Control Tower landing zone + account factory, S3 Glacier Vault Lock WORM compliance, Amazon Detective incident investigation graph analysis, Customer Managed Policy vs Inline Policy reusability, STS session policy AssumeRole effective permissions intersection, Security Group cross-VPC referencing, WAF rate-based rules credential stuffing, S3 Object Ownership bucket owner enforced, AWS Trusted Advisor security checks, multi-tier SG chaining defense in depth
 
 ### Resilient Architectures
 *(belum ada)*
