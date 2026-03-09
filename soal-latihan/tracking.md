@@ -23,12 +23,12 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 
 | Domain | Target | Dibuat | Sisa |
 |--------|--------|--------|------|
-| Secure Architectures (30%) | 75 | 20 | 55 |
+| Secure Architectures (30%) | 75 | 30 | 45 |
 | Resilient Architectures (26%) | 65 | 0 | 65 |
 | High-Performing (24%) | 60 | 0 | 60 |
 | Cost-Optimized (20%) | 50 | 0 | 50 |
 | Mixed | 0 | 0 | 0 |
-| **Total** | **250** | **20** | **230** |
+| **Total** | **250** | **30** | **220** |
 
 ---
 
@@ -40,7 +40,7 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 |-----|--------|-----------|
 | 01 | Selesai | IAM Identity Center/SSO, credential compromise, IAM Role EC2, S3 Object Lock, AWS Config, WAF, SCP Organizations, Secrets Manager rotation, CloudTrail, VPC Gateway Endpoint |
 | 02 | Selesai | KMS CMK + EBS encryption, SCP tag enforcement, Cognito Identity Pool S3 access, Database Activity Streams, GuardDuty, IAM SourceIp condition, Interface VPC Endpoints, Security Hub, Lambda least privilege, IAM Access Analyzer |
-| 03 | Belum | |
+| 03 | Selesai | Amazon Macie PII discovery, NACL vs SG explicit deny, ACM auto-renewal, Cross-account IAM Role, Permission Boundaries, S3 Block Public Access, Network Firewall DPI, IAM policy evaluation order, Lambda resource-based policy, ALB HTTP→HTTPS redirect |
 | 04 | Belum | |
 | 05 | Belum | |
 | 06 | Belum | |
@@ -93,7 +93,7 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 ### Secure Architectures
 **Set 01:** IAM Identity Center/SSO, credential compromise response, IAM Role untuk EC2, S3 Object Lock Compliance mode, AWS Config change detection, AWS WAF SQLi/XSS, SCP Organizations, Secrets Manager auto-rotation, CloudTrail audit trail, VPC Gateway Endpoint S3
 
-**Set 02:** KMS CMK + EBS encryption + key rotation, SCP tag enforcement (`aws:RequestTag`), Cognito Identity Pool + identity-based S3 access, Database Activity Streams RDS, GuardDuty threat detection, IAM `aws:SourceIp` condition, Interface VPC Endpoints PrivateLink, Security Hub findings aggregation, Lambda execution role least privilege, IAM Access Analyzer unused access
+**Set 03:** Amazon Macie PII/sensitive data discovery, NACL explicit deny vs Security Groups, ACM auto-renewal + ALB, cross-account IAM Role + STS AssumeRole, IAM Permission Boundaries, S3 Block Public Access level akun, AWS Network Firewall DPI + Suricata, IAM policy evaluation order (Explicit Deny), Lambda resource-based policy cross-account, ALB HTTP→HTTPS redirect listener rule
 
 ### Resilient Architectures
 *(belum ada)*
