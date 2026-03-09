@@ -23,12 +23,12 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 
 | Domain | Target | Dibuat | Sisa |
 |--------|--------|--------|------|
-| Secure Architectures (30%) | 75 | 40 | 35 |
+| Secure Architectures (30%) | 75 | 50 | 25 |
 | Resilient Architectures (26%) | 65 | 0 | 65 |
 | High-Performing (24%) | 60 | 0 | 60 |
 | Cost-Optimized (20%) | 50 | 0 | 50 |
 | Mixed | 0 | 0 | 0 |
-| **Total** | **250** | **40** | **210** |
+| **Total** | **250** | **50** | **200** |
 
 ---
 
@@ -42,7 +42,7 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 | 02 | Selesai | KMS CMK + EBS encryption, SCP tag enforcement, Cognito Identity Pool S3 access, Database Activity Streams, GuardDuty, IAM SourceIp condition, Interface VPC Endpoints, Security Hub, Lambda least privilege, IAM Access Analyzer |
 | 03 | Selesai | Amazon Macie PII discovery, NACL vs SG explicit deny, ACM auto-renewal, Cross-account IAM Role, Permission Boundaries, S3 Block Public Access, Network Firewall DPI, IAM policy evaluation order, Lambda resource-based policy, ALB HTTP→HTTPS redirect |
 | 04 | Selesai | AWS Shield Standard/Advanced, SSM Session Manager logging, AWS RAM resource sharing, S3 pre-signed URL, Amazon Inspector CVE scan, AWS Firewall Manager, KMS key policy precedence, Cognito User Pool + Identity Pool, Config auto-remediation SSM, RDS encryption at rest immutable |
-| 05 | Belum | |
+| 05 | Selesai | VPC Flow Logs, S3 Access Points, IRSA EKS, Envelope encryption + KMS DEK, GuardDuty delegated admin, SSM Parameter Store SecureString/tiers, CloudTrail multi-region trail, AWS Artifact compliance reports, S3 Block Public Access level bucket, EFS default encryption + Config rule |
 | 06 | Belum | |
 | 07 | Belum | |
 
@@ -98,6 +98,8 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 **Set 03:** Amazon Macie PII/sensitive data discovery, NACL explicit deny vs Security Groups, ACM auto-renewal + ALB, cross-account IAM Role + STS AssumeRole, IAM Permission Boundaries, S3 Block Public Access level akun, AWS Network Firewall DPI + Suricata, IAM policy evaluation order (Explicit Deny), Lambda resource-based policy cross-account, ALB HTTP→HTTPS redirect listener rule
 
 **Set 04:** AWS Shield Standard vs Advanced, SSM Session Manager session logging, AWS RAM resource sharing, S3 pre-signed URL time-limited access, Amazon Inspector vulnerability assessment, AWS Firewall Manager centralized WAF, KMS key policy vs IAM policy precedence, Cognito User Pool + Identity Pool combined, AWS Config auto-remediation + SSM Automation, RDS encryption immutable at launch
+
+**Set 05:** VPC Flow Logs network traffic metadata, S3 Access Points multi-tenant, IRSA IAM Roles for Service Accounts EKS, envelope encryption + KMS DEK 4KB limit, GuardDuty delegated administrator multi-account, SSM Parameter Store SecureString + Standard/Advanced tier, CloudTrail multi-region trail, AWS Artifact compliance reports ISO/SOC, S3 Block Public Access level bucket, EFS default encryption + Config rule defense-in-depth
 
 ### Resilient Architectures
 *(belum ada)*
