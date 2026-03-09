@@ -25,10 +25,10 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 |--------|--------|--------|------|
 | Secure Architectures (30%) | 75 | 75 | 0 |
 | Resilient Architectures (26%) | 65 | 60 | 5 |
-| High-Performing (24%) | 60 | 20 | 40 |
+| High-Performing (24%) | 60 | 30 | 30 |
 | Cost-Optimized (20%) | 50 | 0 | 50 |
 | Mixed | 0 | 0 | 0 |
-| **Total** | **250** | **155** | **95** |
+| **Total** | **250** | **165** | **85** |
 
 ---
 
@@ -63,7 +63,7 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 |-----|--------|-----------|
 | 14 | Selesai | CloudFront CDN global delivery, Global Accelerator AWS backbone TCP/UDP, EC2 GPU P/G family ML, Cluster Placement Group HPC, EBS io2 Block Express highest IOPS, CloudFront as S3 cache read throttling, RDS Read Replica offload reads, Enhanced Networking ENA SR-IOV, Lambda cold start Provisioned Concurrency, S3 Multipart Upload parallel resume |
 | 15 | Selesai | Redis vs Memcached feature comparison, DynamoDB hot partition key design, EC2 Instance Store ephemeral, Kinesis shard splitting throughput, Aurora Parallel Query storage-layer, Lambda@Edge vs CloudFront Functions, S3 Byte-Range Fetches partial retrieval, VPC Gateway Endpoint routing NAT bypass, ASG instance warm-up target tracking, Database indexing full scan vs index |
-| 16 | Belum | |
+| 16 | Selesai | EC2 Spot Instances, DynamoDB GSI, S3 Select, Redshift distribution/sort key, Amazon OpenSearch, API Gateway caching, Lambda power tuning memory-CPU, ECS Fargate CPU units, Predictive Scaling, EFA OS-bypass RDMA MPI |
 | 17 | Belum | |
 | 18 | Belum | |
 | 19 | Belum | |
@@ -122,6 +122,8 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 **Set 14:** CloudFront CDN edge locations global delivery, Global Accelerator AWS backbone TCP/UDP anycast vs CloudFront, EC2 GPU P/G family ML training vs inference, Cluster Placement Group HPC low latency EFA, EBS io2 Block Express highest IOPS sub-ms, CloudFront as S3 cache read throttle solution, RDS Read Replica offload reads (Multi-AZ tidak serve reads), Enhanced Networking ENA SR-IOV vs EFA, Lambda cold start Provisioned Concurrency, S3 Multipart Upload parallel parts resume on failure
 
 **Set 15:** Redis vs Memcached feature comparison data structures persistence pub/sub, DynamoDB hot partition key design cardinality write sharding, EC2 Instance Store ephemeral high-performance scratch space, Kinesis shard splitting throughput scaling Enhanced Fan-Out read vs write, Aurora Parallel Query storage-layer processing OLAP, Lambda@Edge vs CloudFront Functions edge personalization, S3 Byte-Range Fetches partial object retrieval HTTP Range, VPC Gateway Endpoint route table DynamoDB S3 NAT bypass, ASG instance warm-up period target tracking metric accuracy, Database indexing full table scan vs index scan query optimization
+
+**Set 16:** EC2 Spot Instances fault-tolerant batch workloads interruption checkpoint, DynamoDB GSI Global Secondary Index query pattern access pattern design projection, S3 Select SQL query CSV JSON Parquet push-down filter data transfer reduction, Redshift distribution key DISTKEY DISTYLE sort key zone maps MPP architecture query optimization, Amazon OpenSearch full-text search faceted search inverted index real-time suggestions, API Gateway caching response cache TTL cache key Lambda invocation reduction, Lambda power tuning memory-CPU proportional relationship execution time cost optimization, ECS Fargate task definition CPU units CPU throttling CFS container performance, Predictive Scaling forecast ML cyclical traffic patterns proactive pre-scaling, EFA Elastic Fabric Adapter OS-bypass RDMA MPI HPC inter-node communication
 
 ### Cost-Optimized Architectures
 *(belum ada)*
