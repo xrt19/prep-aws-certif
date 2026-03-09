@@ -24,11 +24,11 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 | Domain | Target | Dibuat | Sisa |
 |--------|--------|--------|------|
 | Secure Architectures (30%) | 75 | 75 | 0 |
-| Resilient Architectures (26%) | 65 | 50 | 15 |
+| Resilient Architectures (26%) | 65 | 60 | 5 |
 | High-Performing (24%) | 60 | 0 | 60 |
 | Cost-Optimized (20%) | 50 | 0 | 50 |
 | Mixed | 0 | 0 | 0 |
-| **Total** | **250** | **125** | **125** |
+| **Total** | **250** | **135** | **115** |
 
 ---
 
@@ -55,7 +55,7 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 | 10 | Selesai | ECS Service self-healing Fargate, DynamoDB Global Tables multi-active, ALB weighted target groups blue/green, NLB Elastic IP static, DynamoDB Streams event-driven, Aurora Serverless v2, EventBridge content-based routing, API Gateway caching, S3 SRR vs CRR, Step scaling asymmetric scale |
 | 11 | Selesai | SQS Long Polling reduce empty responses, Kinesis Firehose managed delivery S3, ASG cooldown period warm-up, DynamoDB DAX microsecond latency, Elastic Beanstalk Rolling deployment, EFS regional multi-AZ by default, CloudFront Origin Groups failover, Route 53 Geolocation routing, RDS Storage Auto Scaling, ECS Capacity Providers Cluster scaling |
 | 12 | Selesai | ElastiCache Redis Multi-AZ failover, Lambda Reserved vs Provisioned Concurrency, FSx for Lustre HPC, AWS Elastic Disaster Recovery, AWS Backup centralized, DynamoDB On-Demand spiky workloads, FSx for Windows SMB AD, AWS Fault Injection Service chaos engineering, Route 53 weighted + health checks canary, Transit Gateway Peering inter-region |
-| 13 | Belum | |
+| 13 | Selesai | SQS Delay Queue DelaySeconds, SNS Subscription Filter Policy, Connection Draining Deregistration Delay, ASG Mixed Instances Policy Spot+On-Demand, API Gateway WebSocket API, Lambda Event Source Mapping BisectOnFunctionError, ElastiCache Redis Cluster Mode sharding, AWS AppSync GraphQL real-time, DR Warm Standby RTO/RPO vs cost, RDS Multi-AZ failover brief interruption retry logic |
 
 ### High-Performing Architectures (Set 14–19)
 
@@ -115,6 +115,8 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 **Set 11:** SQS Long Polling WaitTimeSeconds reduce empty responses, Kinesis Data Firehose managed delivery transform S3, ASG cooldown period instance warm-up, DynamoDB DAX microsecond latency hot items, Elastic Beanstalk Rolling deployment no downtime, EFS regional redundancy multi-AZ by default, CloudFront Origin Groups origin failover, Route 53 Geolocation routing country-level default record, RDS Storage Auto Scaling no downtime, ECS Capacity Providers Cluster Auto Scaling EC2 infrastructure
 
 **Set 12:** ElastiCache Redis Multi-AZ automatic failover, Lambda Reserved Concurrency vs Provisioned Concurrency, FSx for Lustre HPC parallel file system, AWS Elastic Disaster Recovery continuous replication on-premise, AWS Backup centralized multi-service, DynamoDB On-Demand vs Provisioned spiky workloads, FSx for Windows File Server SMB NTFS AD integration, AWS Fault Injection Service chaos engineering, Route 53 weighted routing + health checks canary failover, Transit Gateway Peering inter-region hub-and-spoke
+
+**Set 13:** SQS Delay Queue DelaySeconds vs Visibility Timeout, SNS Subscription Filter Policy content-based delivery, Connection Draining Deregistration Delay in-flight protection, ASG Mixed Instances Policy Spot+On-Demand fallback, API Gateway WebSocket API bidirectional persistent, Lambda Event Source Mapping BisectOnFunctionError poison pill, ElastiCache Redis Cluster Mode Enabled sharding partial failure, AWS AppSync managed GraphQL real-time subscriptions, DR Warm Standby RTO/RPO vs cost trade-off, RDS Multi-AZ failover brief interruption retry logic requirement
 
 ### High-Performing Architectures
 *(belum ada)*
