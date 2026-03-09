@@ -25,10 +25,10 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 |--------|--------|--------|------|
 | Secure Architectures (30%) | 75 | 75 | 0 |
 | Resilient Architectures (26%) | 65 | 60 | 5 |
-| High-Performing (24%) | 60 | 0 | 60 |
+| High-Performing (24%) | 60 | 10 | 50 |
 | Cost-Optimized (20%) | 50 | 0 | 50 |
 | Mixed | 0 | 0 | 0 |
-| **Total** | **250** | **135** | **115** |
+| **Total** | **250** | **145** | **105** |
 
 ---
 
@@ -61,7 +61,7 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 
 | Set | Status | Topik Soal |
 |-----|--------|-----------|
-| 14 | Belum | |
+| 14 | Selesai | CloudFront CDN global delivery, Global Accelerator AWS backbone TCP/UDP, EC2 GPU P/G family ML, Cluster Placement Group HPC, EBS io2 Block Express highest IOPS, CloudFront as S3 cache read throttling, RDS Read Replica offload reads, Enhanced Networking ENA SR-IOV, Lambda cold start Provisioned Concurrency, S3 Multipart Upload parallel resume |
 | 15 | Belum | |
 | 16 | Belum | |
 | 17 | Belum | |
@@ -119,7 +119,7 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 **Set 13:** SQS Delay Queue DelaySeconds vs Visibility Timeout, SNS Subscription Filter Policy content-based delivery, Connection Draining Deregistration Delay in-flight protection, ASG Mixed Instances Policy Spot+On-Demand fallback, API Gateway WebSocket API bidirectional persistent, Lambda Event Source Mapping BisectOnFunctionError poison pill, ElastiCache Redis Cluster Mode Enabled sharding partial failure, AWS AppSync managed GraphQL real-time subscriptions, DR Warm Standby RTO/RPO vs cost trade-off, RDS Multi-AZ failover brief interruption retry logic requirement
 
 ### High-Performing Architectures
-*(belum ada)*
+**Set 14:** CloudFront CDN edge locations global delivery, Global Accelerator AWS backbone TCP/UDP anycast vs CloudFront, EC2 GPU P/G family ML training vs inference, Cluster Placement Group HPC low latency EFA, EBS io2 Block Express highest IOPS sub-ms, CloudFront as S3 cache read throttle solution, RDS Read Replica offload reads (Multi-AZ tidak serve reads), Enhanced Networking ENA SR-IOV vs EFA, Lambda cold start Provisioned Concurrency, S3 Multipart Upload parallel parts resume on failure
 
 ### Cost-Optimized Architectures
 *(belum ada)*
