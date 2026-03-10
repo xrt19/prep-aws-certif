@@ -26,9 +26,9 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 | Secure Architectures (30%) | 75 | 75 | 0 |
 | Resilient Architectures (26%) | 65 | 60 | 5 |
 | High-Performing (24%) | 60 | 60 | 0 |
-| Cost-Optimized (20%) | 50 | 40 | 10 |
+| Cost-Optimized (20%) | 50 | 50 | 0 |
 | Mixed | 0 | 0 | 0 |
-| **Total** | **250** | **235** | **15** |
+| **Total** | **250** | **245** | **5** |
 
 ---
 
@@ -76,7 +76,7 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 | 21 | Selesai | Redshift Serverless RPU billing, Compute Savings Plans flexibility, CloudFront Price Class, Fargate Spot interruptible, S3 Standard-IA minimum duration, CloudFront data transfer cost EC2-to-CloudFront free, DynamoDB On-Demand vs Provisioned, Cost Explorer Budgets Cost Allocation Tags, EBS gp3 vs gp2 independent IOPS, EMR Auto Termination Spot task nodes |
 | 22 | Selesai | Lambda GB-second pricing vs Fargate long-running, serverless vs EC2 idle low-traffic, EBS DeleteOnTermination orphaned volumes, RDS snapshot manual vs automated cost, Elastic IP unassociated charge, Consolidated Billing volume discounts, Cost Explorer Savings Plans recommendations, S3 Lifecycle backup retention tiers, Compute Optimizer right-sizing, intra-VPC private IP free vs public IP NAT cost |
 | 23 | Selesai | EKS Spot worker nodes Karpenter, CloudWatch Logs retention policy, SQS Long Polling API request cost, ElastiCache caching reduce RDS cost, S3 small objects aggregation request pricing, RI baseline + Spot burst mixed strategy, S3 cross-region transfer pricing, Budgets actions automated governance, Spot Fleet capacityOptimized HPC diversification, WAF Managed Rules vs custom rules |
-| 24 | Belum | |
+| 24 | Selesai | S3 partitioning partition pruning Athena, Kinesis On-Demand mode variable traffic, Compute Optimizer right-sizing multi-dimensional, EMR Managed Scaling Spark straggler, API Gateway HTTP API vs REST API 71% cheaper, Redshift Spectrum tiered hot/cold storage, Trusted Advisor 5 categories Cost checks, SES 62k free emails from EC2, AWS Resource Explorer multi-region discovery, Savings Plans + Spot ML training kombinas |
 
 ### Mixed (Set 25)
 
@@ -138,6 +138,8 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 **Set 22:** Lambda GB-second pricing long-running heavy tasks vs Fargate Spot cost comparison, API Gateway Lambda serverless vs EC2 idle cost low-traffic infrequent applications, EBS DeleteOnTermination flag orphaned unattached volumes cost prevention, RDS manual snapshot vs automated backup pricing free tier manual snapshot accumulation, Elastic IP unassociated charge $0.005/hour vs free when attached running instance, AWS Organizations Consolidated Billing volume discounts tiered pricing S3 data transfer aggregation, Cost Explorer Savings Plans recommendations lookback period commitment optimization projected savings, S3 Lifecycle rules backup retention harian mingguan bulanan tiered by age Glacier Deep Archive, AWS Compute Optimizer ML right-sizing EC2 Lambda EBS Fargate ASG over-provisioned, intra-VPC private IP data transfer free vs public IP NAT Gateway misconfiguration charge
 
 **Set 23:** EKS cost optimization Karpenter Cluster Autoscaler Spot worker nodes On-Demand mix node diversification, CloudWatch Logs retention policy per log group storage cost Never Expire anti-pattern, SQS Long Polling WaitTimeSeconds 20 short polling vs long polling API request cost reduction, ElastiCache caching layer reduce RDS load downsize instance cost cache-aside pattern, S3 API request pricing small objects aggregation ZIP Parquet PUT GET cost per million, RI baseline capacity Spot burst capacity ASG Mixed Instances Policy On-Demand fallback, S3 cross-region data transfer $0.02/GB vs same-region free S3 CRR alternative, AWS Budgets budget actions IAM SCP enforcement automated cost governance dev environment sprawl, Spot Fleet capacityOptimized strategy diversification multiple pools cliff event prevention HPC checkpoint, AWS WAF Managed Rules rule groups flat pricing vs custom rules per-rule pricing security cost
+
+**Set 24:** S3 partitioning Hive-style folder hierarchy Athena partition pruning scan cost reduction, Kinesis Data Streams On-Demand mode vs Provisioned shard-hour billing variable traffic, Compute Optimizer multi-dimensional analysis CPU memory network disk right-size avoid premature terminate, EMR Managed Scaling YARN metrics task node scale down Spark straggler Dynamic Resource Allocation, API Gateway HTTP API vs REST API 71% cheaper $1 vs $3.50 per million feature comparison migration, Redshift Spectrum tiered hot cold data S3 archive cross-source SQL join Spectrum per TB charge, AWS Trusted Advisor 5 categories Cost Optimization checks idle resources support tier access, Amazon SES pricing 62000 free emails per month from EC2 same region data transfer free, AWS Resource Explorer multi-region resource discovery untagged resources inventory cost review, EC2 Savings Plans ML GPU training predictable reguler Spot experimental combined strategy
 
 ### Mixed
 *(belum ada)*
