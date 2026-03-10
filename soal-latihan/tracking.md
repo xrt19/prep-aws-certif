@@ -27,8 +27,8 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 | Resilient Architectures (26%) | 65 | 60 | 5 |
 | High-Performing (24%) | 60 | 60 | 0 |
 | Cost-Optimized (20%) | 50 | 50 | 0 |
-| Mixed | 0 | 0 | 0 |
-| **Total** | **250** | **245** | **5** |
+| Mixed | 0 | 10 | 0 |
+| **Total** | **250** | **255** | **0** |
 
 ---
 
@@ -82,7 +82,7 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 
 | Set | Status | Topik Soal |
 |-----|--------|-----------|
-| 25 | Belum | |
+| 25 | Selesai | SCP CloudTrail protection, Warm Standby Aurora Global DB, Lambda@Edge edge latency, AWS Batch Spot event-driven, Lambda least privilege per function, SQS DLQ poison pill, Oracle Aurora PostgreSQL SCT DMS, CloudFront logs S3 Lifecycle Athena, Multi-tenant Cognito DynamoDB LeadingKeys, Serverless API GW Lambda DynamoDB WAF |
 
 ---
 
@@ -141,5 +141,4 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 
 **Set 24:** S3 partitioning Hive-style folder hierarchy Athena partition pruning scan cost reduction, Kinesis Data Streams On-Demand mode vs Provisioned shard-hour billing variable traffic, Compute Optimizer multi-dimensional analysis CPU memory network disk right-size avoid premature terminate, EMR Managed Scaling YARN metrics task node scale down Spark straggler Dynamic Resource Allocation, API Gateway HTTP API vs REST API 71% cheaper $1 vs $3.50 per million feature comparison migration, Redshift Spectrum tiered hot cold data S3 archive cross-source SQL join Spectrum per TB charge, AWS Trusted Advisor 5 categories Cost Optimization checks idle resources support tier access, Amazon SES pricing 62000 free emails per month from EC2 same region data transfer free, AWS Resource Explorer multi-region resource discovery untagged resources inventory cost review, EC2 Savings Plans ML GPU training predictable reguler Spot experimental combined strategy
 
-### Mixed
-*(belum ada)*
+**Set 25 (Mixed):** SCP preventive control CloudTrail protection Organizations member accounts root, Warm Standby DR Aurora Global Database cross-region lag RTO RPO balance, Lambda@Edge edge processing latency elimination vs Global Accelerator vs multi-region deploy, AWS Batch Spot event-driven batch S3 trigger idle EC2 elimination cost, Lambda least privilege separate IAM role per function specific ARN blast radius, SQS DLQ Dead Letter Queue poison pill maxReceiveCount head-of-line blocking, Oracle Aurora PostgreSQL migration AWS SCT schema conversion DMS CDC licensing cost, CloudFront access logs S3 small files Lifecycle Kinesis Firehose batching Athena query, Multi-tenant SaaS Cognito JWT claims DynamoDB LeadingKeys row-level security isolation, Serverless architecture API Gateway Lambda DynamoDB on-demand WAF SQLi DDoS protection
