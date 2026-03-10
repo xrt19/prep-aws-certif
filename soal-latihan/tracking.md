@@ -26,9 +26,9 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 | Secure Architectures (30%) | 75 | 75 | 0 |
 | Resilient Architectures (26%) | 65 | 60 | 5 |
 | High-Performing (24%) | 60 | 60 | 0 |
-| Cost-Optimized (20%) | 50 | 20 | 30 |
+| Cost-Optimized (20%) | 50 | 30 | 20 |
 | Mixed | 0 | 0 | 0 |
-| **Total** | **250** | **215** | **35** |
+| **Total** | **250** | **225** | **25** |
 
 ---
 
@@ -74,7 +74,7 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 |-----|--------|-----------|
 | 20 | Selesai | EC2 Reserved Instances payment options, EC2 start/stop scheduling dev/test, S3 Lifecycle Policy tiered storage classes, Aurora Serverless v2 ACU billing, S3 Intelligent-Tiering auto tiering, Spot Fleet checkpointing batch, Lambda no idle cost unpredictable traffic, VPC Gateway Endpoints NAT cost reduction, EC2 Instance Store ephemeral no cost, RI Sharing Organizations Consolidated Billing |
 | 21 | Selesai | Redshift Serverless RPU billing, Compute Savings Plans flexibility, CloudFront Price Class, Fargate Spot interruptible, S3 Standard-IA minimum duration, CloudFront data transfer cost EC2-to-CloudFront free, DynamoDB On-Demand vs Provisioned, Cost Explorer Budgets Cost Allocation Tags, EBS gp3 vs gp2 independent IOPS, EMR Auto Termination Spot task nodes |
-| 22 | Belum | |
+| 22 | Selesai | Lambda GB-second pricing vs Fargate long-running, serverless vs EC2 idle low-traffic, EBS DeleteOnTermination orphaned volumes, RDS snapshot manual vs automated cost, Elastic IP unassociated charge, Consolidated Billing volume discounts, Cost Explorer Savings Plans recommendations, S3 Lifecycle backup retention tiers, Compute Optimizer right-sizing, intra-VPC private IP free vs public IP NAT cost |
 | 23 | Belum | |
 | 24 | Belum | |
 
@@ -134,6 +134,8 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 **Set 20:** EC2 Reserved Instances No Partial All Upfront payment options steady-state workload 1-year 3-year, EC2 start/stop scheduling Instance Scheduler EventBridge Lambda dev/test cost optimization RI billing when stopped, S3 Lifecycle Policy tiered storage Standard Standard-IA Glacier Flexible Deep Archive compliance archiving 7-year retention, Aurora Serverless v2 ACU billing scale to minimum intermittent workload vs RDS per-hour, S3 Intelligent-Tiering automatic tier migration Frequent Infrequent Archive no retrieval fee unknown access patterns, Spot Fleet allocation strategies checkpointing batch processing 90% savings, Lambda pricing per invocation per ms no idle cost unpredictable traffic serverless, VPC Gateway Endpoints S3 DynamoDB NAT Gateway cost components data processing per GB, EC2 Instance Store ephemeral storage no additional charge intermediate temporary data, RI Sharing AWS Organizations Consolidated Billing multi-account benefit sharing
 
 **Set 21:** Redshift Serverless RPU per-second billing idle cost elimination intermittent analytics, Compute Savings Plans vs Standard RI vs Convertible RI flexibility EC2 Lambda Fargate, CloudFront Price Class 100 200 All edge location cost vs latency trade-off, Fargate Spot 70% discount interruptible fault-tolerant container workloads 2-minute notice, S3 Standard-IA minimum 30-day storage duration retrieval fee known access patterns lifecycle, CloudFront data transfer pricing EC2-to-CloudFront free origin fetch caching cost reduction, DynamoDB On-Demand vs Provisioned break-even utilization 20% threshold unused capacity, AWS Cost Explorer AWS Budgets Cost Allocation Tags cost visibility governance, EBS gp3 vs gp2 independent IOPS provisioning baseline 3000 IOPS cost 20% cheaper, EMR Auto Termination idle timeout Spot task nodes vs On-Demand core nodes HDFS safety
+
+**Set 22:** Lambda GB-second pricing long-running heavy tasks vs Fargate Spot cost comparison, API Gateway Lambda serverless vs EC2 idle cost low-traffic infrequent applications, EBS DeleteOnTermination flag orphaned unattached volumes cost prevention, RDS manual snapshot vs automated backup pricing free tier manual snapshot accumulation, Elastic IP unassociated charge $0.005/hour vs free when attached running instance, AWS Organizations Consolidated Billing volume discounts tiered pricing S3 data transfer aggregation, Cost Explorer Savings Plans recommendations lookback period commitment optimization projected savings, S3 Lifecycle rules backup retention harian mingguan bulanan tiered by age Glacier Deep Archive, AWS Compute Optimizer ML right-sizing EC2 Lambda EBS Fargate ASG over-provisioned, intra-VPC private IP data transfer free vs public IP NAT Gateway misconfiguration charge
 
 ### Mixed
 *(belum ada)*
