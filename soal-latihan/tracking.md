@@ -26,9 +26,9 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 | Secure Architectures (30%) | 75 | 75 | 0 |
 | Resilient Architectures (26%) | 65 | 60 | 5 |
 | High-Performing (24%) | 60 | 60 | 0 |
-| Cost-Optimized (20%) | 50 | 10 | 40 |
+| Cost-Optimized (20%) | 50 | 20 | 30 |
 | Mixed | 0 | 0 | 0 |
-| **Total** | **250** | **205** | **45** |
+| **Total** | **250** | **215** | **35** |
 
 ---
 
@@ -73,7 +73,7 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 | Set | Status | Topik Soal |
 |-----|--------|-----------|
 | 20 | Selesai | EC2 Reserved Instances payment options, EC2 start/stop scheduling dev/test, S3 Lifecycle Policy tiered storage classes, Aurora Serverless v2 ACU billing, S3 Intelligent-Tiering auto tiering, Spot Fleet checkpointing batch, Lambda no idle cost unpredictable traffic, VPC Gateway Endpoints NAT cost reduction, EC2 Instance Store ephemeral no cost, RI Sharing Organizations Consolidated Billing |
-| 21 | Belum | |
+| 21 | Selesai | Redshift Serverless RPU billing, Compute Savings Plans flexibility, CloudFront Price Class, Fargate Spot interruptible, S3 Standard-IA minimum duration, CloudFront data transfer cost EC2-to-CloudFront free, DynamoDB On-Demand vs Provisioned, Cost Explorer Budgets Cost Allocation Tags, EBS gp3 vs gp2 independent IOPS, EMR Auto Termination Spot task nodes |
 | 22 | Belum | |
 | 23 | Belum | |
 | 24 | Belum | |
@@ -132,6 +132,8 @@ berikutnya yang statusnya "Belum". Setelah selesai, update tracking.md.
 **Set 19:** DynamoDB GSI composite key sort key for ordering query optimization, Aurora Machine Learning SageMaker Comprehend SQL function ML inference in-database, DynamoDB Streams Lambda OpenSearch CDC change data capture audit trail real-time sync, SageMaker endpoint blue/green deployment canary traffic shifting zero-downtime model update, AWS Cloud Map ECS Service Discovery DNS-based dynamic registration deregistration, CloudWatch PutMetricData API custom business metrics namespaces dimensions, Amazon Athena serverless ad-hoc interactive SQL S3 data lake pay-per-scan, Secrets Manager ECS native integration secrets injection automatic rotation database credentials, Lambda VPC configuration NAT Gateway private subnet internet access RDS pattern, Global Accelerator anycast static IP instant failover AWS backbone vs Route 53 DNS propagation delay
 
 **Set 20:** EC2 Reserved Instances No Partial All Upfront payment options steady-state workload 1-year 3-year, EC2 start/stop scheduling Instance Scheduler EventBridge Lambda dev/test cost optimization RI billing when stopped, S3 Lifecycle Policy tiered storage Standard Standard-IA Glacier Flexible Deep Archive compliance archiving 7-year retention, Aurora Serverless v2 ACU billing scale to minimum intermittent workload vs RDS per-hour, S3 Intelligent-Tiering automatic tier migration Frequent Infrequent Archive no retrieval fee unknown access patterns, Spot Fleet allocation strategies checkpointing batch processing 90% savings, Lambda pricing per invocation per ms no idle cost unpredictable traffic serverless, VPC Gateway Endpoints S3 DynamoDB NAT Gateway cost components data processing per GB, EC2 Instance Store ephemeral storage no additional charge intermediate temporary data, RI Sharing AWS Organizations Consolidated Billing multi-account benefit sharing
+
+**Set 21:** Redshift Serverless RPU per-second billing idle cost elimination intermittent analytics, Compute Savings Plans vs Standard RI vs Convertible RI flexibility EC2 Lambda Fargate, CloudFront Price Class 100 200 All edge location cost vs latency trade-off, Fargate Spot 70% discount interruptible fault-tolerant container workloads 2-minute notice, S3 Standard-IA minimum 30-day storage duration retrieval fee known access patterns lifecycle, CloudFront data transfer pricing EC2-to-CloudFront free origin fetch caching cost reduction, DynamoDB On-Demand vs Provisioned break-even utilization 20% threshold unused capacity, AWS Cost Explorer AWS Budgets Cost Allocation Tags cost visibility governance, EBS gp3 vs gp2 independent IOPS provisioning baseline 3000 IOPS cost 20% cheaper, EMR Auto Termination idle timeout Spot task nodes vs On-Demand core nodes HDFS safety
 
 ### Mixed
 *(belum ada)*
